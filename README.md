@@ -1,3 +1,13 @@
+<h1>Daily News - Typescript | NextJs | Tailwind </h1>
+<p>Aplicação para exibição de notícias consumindo API do NewsAPI (https://newsapi.org/)</p>
+<p>Utilização de slugs e categorias para roteamento e SEO.</p>
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
