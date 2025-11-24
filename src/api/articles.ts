@@ -55,22 +55,23 @@ export const fetchArticlesByCategory = async (
     return mockArticlesByCategory[category as keyof typeof mockArticlesByCategory] || mockArticles.slice(0, 3);
   }
 };
-export const fetchArticlesByCountry = async (
-  country: string
-): Promise<Article[]> => {
-  try {
-    const response = await newsAPI.get<Data>("/top-headlines", {
-      params: {
-        country: country,
-        apiKey: process.env.NEWS_API_KEY,
-      },
-    });
-    return response.data.articles;
-  } catch (error) {
-    console.error(`Error fetching articles for country ${country}, using mock data as fallback:`, error);
-    return mockArticles;
-  }
-}
+
+// export const fetchArticlesByCountry = async (
+//   country: string
+// ): Promise<Article[]> => {
+//   try {
+//     const response = await newsAPI.get<Data>("/top-headlines", {
+//       params: {
+//         country: country,
+//         apiKey: process.env.NEWS_API_KEY,
+//       },
+//     });
+//     return response.data.articles;
+//   } catch (error) {
+//     console.error(`Error fetching articles for country ${country}, using mock data as fallback:`, error);
+//     return mockArticles;
+//   }
+// }
 
 export const fetchArticleBySlug = async (
   slug: string
