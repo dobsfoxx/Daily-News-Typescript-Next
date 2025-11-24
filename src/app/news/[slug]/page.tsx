@@ -2,6 +2,7 @@ import { Article } from "@/types/news";
 import { fetchArticleBySlug } from "@/api/articles";
 import Link from "next/link";
 
+
 type Props = {
   params: Promise<{
     slug: string;
@@ -49,7 +50,7 @@ export default async function News({ params }: Props) {
     <div className="container mx-auto p-6">
       <Link
         href="/"
-        className="text-blue-600 hover:text-blue-800 mb-4 inline-block"
+        className="text-blue-300 hover:text-blue-900 mb-4 inline-block"
       >
         ← Back to News
       </Link>
@@ -58,13 +59,14 @@ export default async function News({ params }: Props) {
         <h1 className="text-4xl font-bold mb-6">{article.title}</h1>
 
         {article.urlToImage && (
-          <figure className="mb-6">
+          <picture  className="mb-6">
             <img
               src={article.urlToImage}
               alt={article.title}
               className="w-full h-auto rounded-lg"
+             
             />
-          </figure>
+          </picture>
         )}
 
         <div className=" mb-6">

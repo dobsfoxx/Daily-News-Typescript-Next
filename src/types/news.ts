@@ -11,6 +11,6 @@ export interface Article {
   publishedAt: string;
   content: string | null;
   language?: string;
-  cayegory?: string;
+	 category?: string;
   country?: string;
 }
